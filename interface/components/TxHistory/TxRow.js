@@ -53,7 +53,7 @@ class TxRow extends Component {
       }
       txHashLink = (
         <a
-          href={`https://${subdomain}etherscan.io/tx/${tx.hash}`}
+          href={`https://${subdomain}explorer.wanli.uno/transactions/${tx.hash}`}
           target="_blank"
         >
           {tx.hash}

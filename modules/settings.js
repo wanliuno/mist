@@ -93,7 +93,7 @@ class Settings {
   }
 
   get appName() {
-    return this.uiMode === 'mist' ? 'Mist' : 'Ethereum Wallet';
+    return this.uiMode === 'mist' ? 'Mist' : 'Wanliuno Wallet';
   }
 
   get appLicense() {
@@ -161,13 +161,13 @@ class Settings {
     ipcPath = this.userHomePath;
 
     if (process.platform === 'darwin') {
-      ipcPath += '/Library/Ethereum/geth.ipc';
+      ipcPath += '/Library/Wanliuno/geth.ipc';
     } else if (
       process.platform === 'freebsd' ||
       process.platform === 'linux' ||
       process.platform === 'sunos'
     ) {
-      ipcPath += '/.ethereum/geth.ipc';
+      ipcPath += '/.wanliuno/geth.ipc';
     } else if (process.platform === 'win32') {
       ipcPath = '\\\\.\\pipe\\geth.ipc';
     }
@@ -401,7 +401,7 @@ const argv = require('yargs')
     },
     ethpath: {
       demand: false,
-      describe: 'Path to Eth executable to use instead of default.',
+      describe: 'Path to Wli executable to use instead of default.',
       requiresArg: true,
       nargs: 1,
       type: 'string',

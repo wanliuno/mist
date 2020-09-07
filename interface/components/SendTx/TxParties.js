@@ -6,7 +6,7 @@ class TxParties extends Component {
     var amount = EthTools.formatBalance(
       web3.utils.toBN(this.props.value || 0),
       '0,0.00[0000000000000000]',
-      'ether'
+      'wanli'
     );
 
     var dotPos = ~amount.indexOf('.')
@@ -107,7 +107,7 @@ class TxParties extends Component {
     return (
       <div className="connection">
         <div className="amount">
-          {this.totalAmount()} <span className="unit">ETHER</span>
+          {this.totalAmount()} <span className="unit">WANLI</span>
           {executionFunction && (
             <div
               className={`function-signature ${
